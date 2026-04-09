@@ -17,43 +17,35 @@ function mostrarMenu() {
     console.log("3. Retirar");
     console.log("4. Salir");
 
-    rl.question("Elige una opción: ", (opcion) => {
-
+    rl.question("Elige una opcion: ", (opcion) => {
         if (opcion === "1") {
-        console.log(cajero.consultarSaldo());
-        mostrarMenu();
-        }
-
-        else if (opcion === "2") {
-        rl.question("Monto a depositar: ", (monto) => {
-            console.log(cajero.Deposito(Number(monto)));
+            console.log(cajero.consultarSaldo());
             mostrarMenu();
-        });
-        }
+        } else if (opcion === "2") {
+            rl.question("Monto a depositar: ", (monto) => {
+                console.log(cajero.Deposito(Number(monto)));
+                mostrarMenu();
+            });
+        } else if (opcion === "3") {
+            rl.question("Monto a retirar: ", (monto) => {
+                try {
+                    console.log(cajero.retiro(Number(monto)));
+                } catch (error) {
+                    if (error instanceof Error) {
+                        console.log("Error:", error.message);
+                    }
+                }
 
-        else if (opcion === "3") {
-        rl.question("Monto a retirar: ", (monto) => {
-            try {
-            console.log(cajero.retiro(Number(monto)));
-            } catch (error) {
-            if (error instanceof Error) {
-                console.log("Error:", error.message);
-            }
-            }
+                mostrarMenu();
+            });
+        } else if (opcion === "4") {
+            console.log("Adios");
+            rl.close();
+        } else {
+            console.log("Opcion invalida");
             mostrarMenu();
-        });
-        }
-
-        else if (opcion === "4") {
-        console.log("Adiós");
-        rl.close();
-        }
-
-        else {
-        console.log("Opción inválida");
-        mostrarMenu();
         }
     });
-    }
+}
 
 mostrarMenu();

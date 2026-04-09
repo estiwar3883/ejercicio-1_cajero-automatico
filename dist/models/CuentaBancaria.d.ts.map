@@ -1,1 +1,1 @@
-{"version":3,"file":"CuentaBancaria.d.ts","sourceRoot":"","sources":["../../src/models/CuentaBancaria.ts"],"names":[],"mappings":""}
+{"version":3,"file":"CuentaBancaria.d.ts","sourceRoot":"","sources":["../../src/models/CuentaBancaria.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,+BAA+B,CAAC;AAEhE,qBAAa,cAAe,YAAW,eAAe;IAIvC,YAAY,EAAE,MAAM;IACpB,MAAM,EAAE,MAAM;IAJzB,OAAO,CAAC,KAAK,CAAS;gBAGX,YAAY,EAAE,MAAM,EACpB,MAAM,EAAE,MAAM,EACrB,YAAY,GAAE,MAAU;IAK5B,cAAc,IAAI,MAAM;IAIxB,QAAQ,CAAC,KAAK,EAAE,MAAM,GAAG,IAAI;IAI7B,MAAM,CAAC,KAAK,EAAE,MAAM,GAAG,OAAO;CAQjC"}

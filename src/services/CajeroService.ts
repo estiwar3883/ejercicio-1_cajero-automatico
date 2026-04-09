@@ -1,13 +1,8 @@
+import { ICajeroService } from "../interfaces/ICajeroService";
 import { CuentaBancaria } from "../models/CuentaBancaria";
 import { esValido } from "../utils/validaciones";
 
-export interface ICajeroService {
-    consultarSaldo(): string;
-    Deposito(monto: number): string;
-    retiro(monto: number): string;
-    }
-
-    export class CajeroService implements ICajeroService {
+export class CajeroService implements ICajeroService {
     private efectivoDisponible: number;
 
     constructor(
@@ -23,7 +18,7 @@ export interface ICajeroService {
 
     Deposito(monto: number): string {
         if (!esValido(monto) || monto <= 0) {
-        throw new Error("Monto inválido para depósito");
+            throw new Error("Monto inválido para depósito");
         }
 
         this.cuenta.Deposito(monto);
@@ -34,17 +29,17 @@ export interface ICajeroService {
 
     retiro(monto: number): string {
         if (!esValido(monto) || monto <= 0) {
-        throw new Error("Monto inválido para retiro");
+            throw new Error("Monto inválido para retiro");
         }
 
         if (monto > this.efectivoDisponible) {
-        throw new Error("El cajero no tiene suficiente efectivo");
+            throw new Error("El cajero no tiene suficiente efectivo");
         }
 
         const retiroExitoso = this.cuenta.retiro(monto);
 
         if (!retiroExitoso) {
-        throw new Error("Fondos insuficientes en la cuenta");
+            throw new Error("Fondos insuficientes en la cuenta");
         }
 
         this.efectivoDisponible -= monto;

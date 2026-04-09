@@ -1,0 +1,1 @@
+{"version":3,"file":"ICajeroService.d.ts","sourceRoot":"","sources":["../../src/interfaces/ICajeroService.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,cAAc;IAC3B,cAAc,IAAI,MAAM,CAAC;IACzB,QAAQ,CAAC,KAAK,EAAE,MAAM,GAAG,MAAM,CAAC;IAChC,MAAM,CAAC,KAAK,EAAE,MAAM,GAAG,MAAM,CAAC;CACjC"}

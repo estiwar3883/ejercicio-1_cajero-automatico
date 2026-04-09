@@ -1,0 +1,1 @@
+{"version":3,"file":"ICuentaBancaria.d.ts","sourceRoot":"","sources":["../../src/interfaces/ICuentaBancaria.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,eAAe;IAC5B,MAAM,EAAE,MAAM,CAAC;IACf,YAAY,EAAE,MAAM,CAAC;IACrB,cAAc,IAAI,MAAM,CAAC;IACzB,QAAQ,CAAC,KAAK,EAAE,MAAM,GAAG,IAAI,CAAC;IAC9B,MAAM,CAAC,KAAK,EAAE,MAAM,GAAG,OAAO,CAAC;CAClC"}
